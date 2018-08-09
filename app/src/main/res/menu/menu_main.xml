@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Tareq Islam on 7/9/18 12:50 AM
+  ~
+  ~  Last modified 7/9/18 12:50 AM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Sitting"
+        app:showAsAction="never">
+
+    </item>
+
+
+    <item android:id="@+id/menu_search"
+        android:title="Search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:iconTint="@android:color/white"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        >
+    </item>
+
+
+
+</menu>

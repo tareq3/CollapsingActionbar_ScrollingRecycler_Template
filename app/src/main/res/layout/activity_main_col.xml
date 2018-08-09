@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Tareq Islam on 8/10/18 1:42 AM
+  ~
+  ~  Last modified 8/10/18 1:25 AM
+  -->
+
+<!--
+  ~ Created by Tareq Islam on 8/9/18 8:37 PM
+  ~
+  ~  Last modified 8/9/18 8:37 PM
+  -->
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:theme="@style/AppTheme.m_Activity"> <!--//here this theme needed for changing statusBar color m_colorPrimaryDark is the Color for StatusBar and ActionBar-->
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+
+        tools:context=".MainActivity">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="false"
+
+            android:theme="@style/AppTheme.AppBarOverlay"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/m_colorPrimaryDark"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+
+
+                />
+
+        </android.support.design.widget.AppBarLayout>
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/activity_main_col_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+              />
+
+        <!-- <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        android:layout_weight=".1"
+        android:layout_gravity="center"
+        ads:adUnitId="@string/banner_home_footer">
+    </com.google.android.gms.ads.AdView>-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

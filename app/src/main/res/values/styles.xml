@@ -1,0 +1,36 @@
+<!--
+  ~ Created by Tareq Islam on 8/10/18 1:38 AM
+  ~
+  ~  Last modified 8/10/18 1:37 AM
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.m_Activity" >
+
+        <item name="colorPrimary">@color/m_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/m_colorPrimaryDark</item>
+        <item name="colorAccent">@color/m_colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/m_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/m_colorPrimaryDark</item> //this is important
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
