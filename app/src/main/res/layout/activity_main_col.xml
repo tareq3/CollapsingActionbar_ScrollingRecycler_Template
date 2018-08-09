@@ -23,13 +23,13 @@
     tools:openDrawer="start"
     android:theme="@style/AppTheme.m_Activity"> <!--//here this theme needed for changing statusBar color m_colorPrimaryDark is the Color for StatusBar and ActionBar-->
 
+
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-
-        tools:context=".MainActivity">
+        android:fitsSystemWindows="false"
+        tools:context=".MainActivity"> <!--Set fitsSystemWindow for true for overlay statusbar else false for simple statusbar-->
 
 
         <android.support.design.widget.AppBarLayout

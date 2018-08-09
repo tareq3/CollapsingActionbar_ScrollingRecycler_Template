@@ -52,32 +52,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.app_name);
 
 
-        AppBarLayout appBarLayout ;
-        appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-
-
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if (verticalOffset >= -appBarLayout.getTotalScrollRange() + toolbar.getHeight()) {
-                    //Toolbar Expanded
-                    toolbar.setTitle(R.string.app_name);
-                  if(mMenu!=null) {
-                      mMenu.findItem(R.id.action_settings).setVisible(true);
-                      mMenu.findItem(R.id.menu_search).setVisible(true);
-                  }
-
-                } else {
-
-                    toolbar.setTitle("");
-                    if(mMenu!=null) {
-                        mMenu.findItem(R.id.action_settings).setVisible(false);
-                        mMenu.findItem(R.id.menu_search).setVisible(false);
-                    }
-
-                }
-            }
-        });
 
 
 
@@ -127,11 +101,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-private Menu mMenu; //for show hide of menu Item
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-       mMenu= menu;
        getMenuInflater().inflate(R.menu.menu_main, menu);
 
 
