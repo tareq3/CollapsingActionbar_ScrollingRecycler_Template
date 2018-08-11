@@ -15,4 +15,5 @@
     <color name="m_colorAccent">#4FB783</color>
     <color name="m_colorPrimary">#409D9B</color>
     <color name="m_colorPrimaryDark">#226B80</color>
+    <color name="placeholder_bg">#dddddd</color>
 </resources>

@@ -17,12 +17,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.mti.collapsingactionbar_scrollingactivity_template.Adapter.ListItemAdapter;
 import com.mti.collapsingactionbar_scrollingactivity_template.model.ToDo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+//Todo:Must do:- When  Recycler has the data we need to stop and Hide the Shimmer
+//So copy following lines just OnData fetch Success Method
+/*
+        sShimmerFrameLayout.stopShimmer();
+        sShimmerFrameLayout.setVisibility(View.GONE);
+*/
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListItemAdapter mAdapter;
 
+    public static ShimmerFrameLayout sShimmerFrameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.app_name);
 
 
+        sShimmerFrameLayout=findViewById(R.id.main_Shimmer);
 
 
 
@@ -144,5 +154,21 @@ public class MainActivity extends AppCompatActivity {
         mToDoList.remove(order);
 
         loadDataIntoRecycler();//after deleting data reload data
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(sShimmerFrameLayout!=null) sShimmerFrameLayout.startShimmer(); //Starting Shimmer
+
+
+    }
+
+    @Override
+    protected void onPause() {
+
+        if(sShimmerFrameLayout!=null) sShimmerFrameLayout.stopShimmer();
+        super.onPause();
     }
 }
